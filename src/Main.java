@@ -41,6 +41,17 @@ public class Main {
             System.out.println("+-----+------+");
         }
 
+        System.out.println();
+        System.out.println("task 3:");
+        ListTask3 list = new ListTask3();
+        list.add(1323, "ab");
+        list.add(1223, "af");
+        list.add(1233, "ac");
+        list.add(123, "ad");
+        System.out.println("whole list   " + list);
+        System.out.println("name for number 123     " + list.getName(123));
+        System.out.println("number for name af     " + list.getNumber("af"));
+
 
     }
 
