@@ -1,4 +1,6 @@
-import List.List;
+import List.*;
+
+import java.util.Scanner;
 
 public class Main {
     private static String example1 = "-5x^6+3x^2-2x+7";
@@ -8,6 +10,7 @@ public class Main {
     private static String example5 = "5";
 
     public static void main(String[] args) {
+        System.out.println("task 1:");
         List list1 = new List(example1);
         System.out.println("list1    " + list1);
 
@@ -21,9 +24,24 @@ public class Main {
         System.out.println("list1 == list2    " + List.Equality(list1, list2));
 
         List sum = new List();
-        List.Add(list1, sum, list2);
+        List.Add(sum, list1, list2);
 
         System.out.println("sum    " + sum);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        System.out.println("task 2:");
+        System.out.println("enter k to delete:");
+        int k = scanner.nextInt();
+        System.out.println("+-----+------+");
+        System.out.println("|  n  | last |");
+        System.out.println("+-----+------+");
+        for (int i = 0; i < 64; i++) {
+            System.out.printf("| %3d | %4S |\n", i + 1, new RoundList(i + 1, k).toString());
+            System.out.println("+-----+------+");
+        }
+
+
     }
 
 }

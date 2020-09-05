@@ -40,7 +40,7 @@ public class List {
 
     }
 
-    public static void Add(List firstList, List resultList, List secondList) {
+    public static void Add(List resultList, List firstList,  List secondList) {
         resultList.clear();
         Node nodeForFirstList = firstList.startNode;
         while (nodeForFirstList.nextNode != null) {
