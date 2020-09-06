@@ -1,9 +1,9 @@
 package List;
 
-public class List {
+public class ListTask1 {
     private Node startNode = new Node(null, null, null);
 
-    public List(String line) {
+    public ListTask1(String line) {
         line = line.substring(line.indexOf("=") + 1);
 //        перед каждым минусом, кроме первого, добавить знак +,
 //        чтоб через регуларное выражение поделить строку
@@ -36,11 +36,11 @@ public class List {
         }
     }
 
-    public List() {
+    public ListTask1() {
 
     }
 
-    public static void Add(List resultList, List firstList,  List secondList) {
+    public static void Add(ListTask1 resultList, ListTask1 firstList, ListTask1 secondList) {
         resultList.clear();
         Node nodeForFirstList = firstList.startNode;
         while (nodeForFirstList.nextNode != null) {
@@ -64,7 +64,7 @@ public class List {
         }
     }
 
-    public static int Meaning(List list, int x) {
+    public static int Meaning(ListTask1 list, int x) {
         Node currentNode = list.startNode;
         int result = 0;
         while (currentNode.nextNode != null) {
@@ -74,7 +74,7 @@ public class List {
         return result;
     }
 
-    public static boolean Equality(List firstList, List secondList) {
+    public static boolean Equality(ListTask1 firstList, ListTask1 secondList) {
         Node nodeForFirstList = firstList.startNode;
         firstListCompare:
         while (nodeForFirstList.nextNode != null) {

@@ -38,19 +38,20 @@ public class ListTask3 {
 
     public void add(Integer number, String name) {
         Node currentNode = startNode;
-        loop:
-        while (currentNode.nextNode != null && currentNode.nextNode.nextNode != null) {
-            currentNode = currentNode.nextNode;
-            int minSize = Math.min(name.length(), currentNode.nextNode.name.length());
-            for (int i = 0; i < minSize; i++) {
-                if (currentNode.name.charAt(i) > name.charAt(i)) {
-                    break loop;
+        size++;
+        try {
+            loop:
+            while (currentNode.nextNode != null) {
+                currentNode = currentNode.nextNode;
+                int minSize = Math.min(name.length(), currentNode.nextNode.name.length());
+                for (int i = 0; i < minSize; i++) {
+                    if (currentNode.nextNode.name.charAt(i) > name.charAt(i)) {
+                        break loop;
+                    }
                 }
             }
-        }
-        size++;
-        if (size == 2) {
-            currentNode.nextNode.nextNode = new Node(number, name, null);
+        } catch (NullPointerException e) {
+            currentNode.nextNode = new Node(number, name, null);
             return;
         }
         currentNode.nextNode = new Node(number, name, currentNode.nextNode);

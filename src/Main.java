@@ -11,20 +11,20 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("task 1:");
-        List list1 = new List(example1);
+        ListTask1 list1 = new ListTask1(example1);
         System.out.println("list1    " + list1);
 
-        List list2 = new List(example2);
+        ListTask1 list2 = new ListTask1(example2);
         System.out.println("list2    " + list2);
 
-        System.out.println("list1 in point 1    " + List.Meaning(list1, 1));
-        System.out.println("list2 in point 0    " + List.Meaning(list2, 0));
+        System.out.println("list1 in point 1    " + ListTask1.Meaning(list1, 1));
+        System.out.println("list2 in point 0    " + ListTask1.Meaning(list2, 0));
 
-        System.out.println("list1 == list1    " + List.Equality(list1, list1));
-        System.out.println("list1 == list2    " + List.Equality(list1, list2));
+        System.out.println("list1 == list1    " + ListTask1.Equality(list1, list1));
+        System.out.println("list1 == list2    " + ListTask1.Equality(list1, list2));
 
-        List sum = new List();
-        List.Add(sum, list1, list2);
+        ListTask1 sum = new ListTask1();
+        ListTask1.Add(sum, list1, list2);
 
         System.out.println("sum    " + sum);
 
@@ -37,22 +37,40 @@ public class Main {
         System.out.println("|  n  | last |");
         System.out.println("+-----+------+");
         for (int i = 0; i < 64; i++) {
-            System.out.printf("| %3d | %4S |\n", i + 1, new RoundList(i + 1, k).toString());
+            System.out.printf("| %3d | %4S |\n", i + 1, new ListTask2(i + 1, k).toString());
             System.out.println("+-----+------+");
         }
 
         System.out.println();
         System.out.println("task 3:");
-        ListTask3 list = new ListTask3();
-        list.add(1323, "ab");
-        list.add(1223, "af");
-        list.add(1233, "ac");
-        list.add(123, "ad");
-        System.out.println("whole list   " + list);
-        System.out.println("name for number 123     " + list.getName(123));
-        System.out.println("number for name af     " + list.getNumber("af"));
+        ListTask3 listTask3 = new ListTask3();
+        listTask3.add(1123323, "ab");
+        listTask3.add(1227643, "af");
+        listTask3.add(1223733, "ac");
+        listTask3.add(8315983, "abc");
+        listTask3.add(1226333, "ad");
+        listTask3.add(8315983, "aba");
+        listTask3.add(1984289, "afc");
+        System.out.println("whole list   " + listTask3);
+        System.out.println("name for number 123     " + listTask3.getName(1226333));
+        System.out.println("number for name af     " + listTask3.getNumber("af"));
 
-
+//        System.out.println();
+//        System.out.println("task 4:");
+//        ListTask4_bidirectional listTask4 = new ListTask4_bidirectional();
+//        listTask4.add(1123323);
+//        listTask4.add(1227643);
+//        listTask4.add(1223733);
+//        listTask4.add(1226333);
+//        listTask4.add(9143503);
+//        listTask4.add(5913851);
+//        listTask4.add(6983153);
+//        listTask4.add(133);
+//        listTask4.add(512);
+//        listTask4.add(190);
+//        System.out.println("full list     " + listTask4);
+//        System.out.print("reversed list     ");
+//        listTask4.showFromRightToLeft();
+//        System.out.println("sorted list with 7 digits number    " + listTask4.getUnidirectionalList());
     }
-
 }

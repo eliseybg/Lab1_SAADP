@@ -1,10 +1,10 @@
 package List;
 
-public class RoundList {
+public class ListTask2 {
     private Node startNode = new Node(null, null);
     private int size = 0;
 
-    public RoundList(int size, int delete) {
+    public ListTask2(int size, int delete) {
         for (int i = 0; i < size; i++) {
             add();
         }
@@ -17,17 +17,12 @@ public class RoundList {
 
     @Override
     public String toString() {
-        String result = "{";
         Node currentNode = startNode;
         int position = 0;
         while (position < size) {
             currentNode = currentNode.nextNode;
-            result += "(" + currentNode.value + "), ";
             position++;
         }
-        if (size != 0)
-            result = result.substring(0, result.length() - 2);
-        result += "}";
         return currentNode.value + "";
     }
 
@@ -56,7 +51,6 @@ public class RoundList {
                 position = 0;
             } else
                 currentNode = currentNode.nextNode;
-//            System.out.println(this);
         }
         if (deleteNumber != 1)
             startNode.nextNode = currentNode;
