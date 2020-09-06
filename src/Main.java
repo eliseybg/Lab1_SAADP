@@ -55,22 +55,22 @@ public class Main {
         System.out.println("name for number 123     " + listTask3.getName(1226333));
         System.out.println("number for name af     " + listTask3.getNumber("af"));
 
-//        System.out.println();
-//        System.out.println("task 4:");
-//        ListTask4_bidirectional listTask4 = new ListTask4_bidirectional();
-//        listTask4.add(1123323);
-//        listTask4.add(1227643);
-//        listTask4.add(1223733);
-//        listTask4.add(1226333);
-//        listTask4.add(9143503);
-//        listTask4.add(5913851);
-//        listTask4.add(6983153);
-//        listTask4.add(133);
-//        listTask4.add(512);
-//        listTask4.add(190);
-//        System.out.println("full list     " + listTask4);
-//        System.out.print("reversed list     ");
-//        listTask4.showFromRightToLeft();
-//        System.out.println("sorted list with 7 digits number    " + listTask4.getUnidirectionalList());
+        System.out.println();
+        System.out.println("task 4:");
+        ListTask4_bidirectional listTask4 = new ListTask4_bidirectional();
+        listTask4.add(1123323);
+        listTask4.add(1227643);
+        listTask4.add(1223733);
+        listTask4.add(1226333);
+        listTask4.add(9143503);
+        listTask4.add(5913851);
+        listTask4.add(6983153);
+        listTask4.add(133);
+        listTask4.add(512);
+        listTask4.add(190);
+        System.out.println("full list     " + listTask4);
+        System.out.print("reversed list     ");
+        listTask4.showFromRightToLeft();
+        System.out.println("sorted list with 7 digits number    " + listTask4.getUnidirectionalList());
     }
 }
